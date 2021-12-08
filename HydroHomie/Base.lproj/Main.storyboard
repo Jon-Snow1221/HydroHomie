@@ -31,7 +31,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="0Va-91-aos"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="drop.fill" catalog="system" id="0Va-91-aos"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,7 +138,7 @@
                             <outlet property="delegate" destination="Bv5-UV-m8R" id="g3p-Zy-28h"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="History" id="9LG-hJ-LLh" userLabel="History"/>
+                    <tabBarItem key="tabBarItem" title="History" image="clock.fill" catalog="system" id="9LG-hJ-LLh" userLabel="History"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMJ-qH-5H6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,6 +146,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="drop.fill" catalog="system" width="101" height="128"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

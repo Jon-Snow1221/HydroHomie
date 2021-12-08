@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		831C192B2760E78400068145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C192A2760E78400068145 /* AppDelegate.swift */; };
 		831C192D2760E78400068145 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C192C2760E78400068145 /* SceneDelegate.swift */; };
-		831C192F2760E78400068145 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C192E2760E78400068145 /* ViewController.swift */; };
 		831C19322760E78400068145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831C19302760E78400068145 /* Main.storyboard */; };
-		831C19352760E78400068145 /* HydroHomie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 831C19332760E78400068145 /* HydroHomie.xcdatamodeld */; };
 		831C19372760E78600068145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831C19362760E78600068145 /* Assets.xcassets */; };
 		831C193A2760E78600068145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831C19382760E78600068145 /* LaunchScreen.storyboard */; };
 		831C19442760F0BE00068145 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831C19432760F0BE00068145 /* CloudKit.framework */; };
 		831C19472760FB9900068145 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C19462760FB9900068145 /* HistoryTableViewController.swift */; };
 		831C194927610AB700068145 /* LogWaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C194827610AB700068145 /* LogWaterViewController.swift */; };
+		831C194B27611FA400068145 /* WaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C194A27611FA400068145 /* WaterData.swift */; };
+		831C194E2761281C00068145 /* WaterDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C194D2761281C00068145 /* WaterDataController.swift */; };
+		831C1956276137B000068145 /* HydroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C1955276137B000068145 /* HydroError.swift */; };
+		831C195827614BA600068145 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C195727614BA600068145 /* HomeScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		831C19272760E78400068145 /* HydroHomie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HydroHomie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		831C192A2760E78400068145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		831C192C2760E78400068145 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		831C192E2760E78400068145 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		831C19312760E78400068145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		831C19342760E78400068145 /* HydroHomie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HydroHomie.xcdatamodel; sourceTree = "<group>"; };
 		831C19362760E78600068145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		831C19392760E78600068145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		831C193B2760E78600068145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +33,10 @@
 		831C19432760F0BE00068145 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		831C19462760FB9900068145 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		831C194827610AB700068145 /* LogWaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWaterViewController.swift; sourceTree = "<group>"; };
+		831C194A27611FA400068145 /* WaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterData.swift; sourceTree = "<group>"; };
+		831C194D2761281C00068145 /* WaterDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDataController.swift; sourceTree = "<group>"; };
+		831C1955276137B000068145 /* HydroError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydroError.swift; sourceTree = "<group>"; };
+		831C195727614BA600068145 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +72,11 @@
 			isa = PBXGroup;
 			children = (
 				831C19412760F0BA00068145 /* HydroHomie.entitlements */,
+				831C194C2761280700068145 /* Model */,
+				831C194F2761282200068145 /* Controllers */,
+				831C195227612C3B00068145 /* Views */,
+				831C19542761378A00068145 /* Helpers+Extensions */,
 				831C19452760F0DE00068145 /* Resources */,
-				831C192E2760E78400068145 /* ViewController.swift */,
-				831C19302760E78400068145 /* Main.storyboard */,
-				831C194827610AB700068145 /* LogWaterViewController.swift */,
-				831C19462760FB9900068145 /* HistoryTableViewController.swift */,
-				831C19382760E78600068145 /* LaunchScreen.storyboard */,
-				831C19332760E78400068145 /* HydroHomie.xcdatamodeld */,
 			);
 			path = HydroHomie;
 			sourceTree = "<group>";
@@ -96,6 +98,66 @@
 				831C193B2760E78600068145 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		831C194C2761280700068145 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				831C194A27611FA400068145 /* WaterData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		831C194F2761282200068145 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				831C19502761283400068145 /* Model Controllers */,
+				831C19512761285000068145 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		831C19502761283400068145 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				831C194D2761281C00068145 /* WaterDataController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		831C19512761285000068145 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				831C195727614BA600068145 /* HomeScreenViewController.swift */,
+				831C194827610AB700068145 /* LogWaterViewController.swift */,
+				831C19462760FB9900068145 /* HistoryTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		831C195227612C3B00068145 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				831C195327612C4700068145 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		831C195327612C4700068145 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				831C19302760E78400068145 /* Main.storyboard */,
+				831C19382760E78600068145 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		831C19542761378A00068145 /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				831C1955276137B000068145 /* HydroError.swift */,
+			);
+			path = "Helpers+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,11 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				831C192F2760E78400068145 /* ViewController.swift in Sources */,
 				831C194927610AB700068145 /* LogWaterViewController.swift in Sources */,
+				831C195827614BA600068145 /* HomeScreenViewController.swift in Sources */,
 				831C192B2760E78400068145 /* AppDelegate.swift in Sources */,
+				831C1956276137B000068145 /* HydroError.swift in Sources */,
 				831C192D2760E78400068145 /* SceneDelegate.swift in Sources */,
-				831C19352760E78400068145 /* HydroHomie.xcdatamodeld in Sources */,
+				831C194E2761281C00068145 /* WaterDataController.swift in Sources */,
+				831C194B27611FA400068145 /* WaterData.swift in Sources */,
 				831C19472760FB9900068145 /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,19 +460,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		831C19332760E78400068145 /* HydroHomie.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				831C19342760E78400068145 /* HydroHomie.xcdatamodel */,
-			);
-			currentVersion = 831C19342760E78400068145 /* HydroHomie.xcdatamodel */;
-			path = HydroHomie.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 831C191F2760E78400068145 /* Project object */;
 }

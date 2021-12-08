@@ -19,6 +19,7 @@
 		831C194E2761281C00068145 /* WaterDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C194D2761281C00068145 /* WaterDataController.swift */; };
 		831C1956276137B000068145 /* HydroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C1955276137B000068145 /* HydroError.swift */; };
 		831C195827614BA600068145 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C195727614BA600068145 /* HomeScreenViewController.swift */; };
+		831C195A2761646300068145 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C19592761646300068145 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		831C194D2761281C00068145 /* WaterDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDataController.swift; sourceTree = "<group>"; };
 		831C1955276137B000068145 /* HydroError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydroError.swift; sourceTree = "<group>"; };
 		831C195727614BA600068145 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		831C19592761646300068145 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				831C1955276137B000068145 /* HydroError.swift */,
+				831C19592761646300068145 /* DateExtension.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				831C195827614BA600068145 /* HomeScreenViewController.swift in Sources */,
 				831C192B2760E78400068145 /* AppDelegate.swift in Sources */,
 				831C1956276137B000068145 /* HydroError.swift in Sources */,
+				831C195A2761646300068145 /* DateExtension.swift in Sources */,
 				831C192D2760E78400068145 /* SceneDelegate.swift in Sources */,
 				831C194E2761281C00068145 /* WaterDataController.swift in Sources */,
 				831C194B27611FA400068145 /* WaterData.swift in Sources */,

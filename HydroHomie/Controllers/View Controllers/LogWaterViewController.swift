@@ -14,14 +14,22 @@ protocol UpdateWaterDelegate: AnyObject {
 class LogWaterViewController: UIViewController {
     
     // MARK: - Outlets
+    @IBOutlet weak var waterVolTextField: UITextField!
+    @IBOutlet weak var eightOZButton: UIButton!
+    @IBOutlet weak var sixteenOZButton: UIButton!
+    @IBOutlet weak var thirtyTwoOZButton: UIButton!
     
     // MARK: - Properties
     weak var delegate: UpdateWaterDelegate?
+    var buttons: [UIButton] {
+        return [eightOZButton, sixteenOZButton, thirtyTwoOZButton]
+    }
     
     // MARK: - Lifecycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpView()
         
     }
     
@@ -31,15 +39,34 @@ class LogWaterViewController: UIViewController {
     }
     
     // MARK: - Actions
+    
+    @IBAction func volTextFieldEditingDidEnd(_ sender: Any) {
+        resetButtons()
+    }
+    
+    @IBAction func eightOZButtonTapped(_ sender: Any) {
+        waterVolTextField.text = "8"
+        updateSelectedButton(eightOZButton)
+    }
+    @IBAction func sixteenOZButtonTapped(_ sender: Any) {
+        waterVolTextField.text = "16"
+        updateSelectedButton(sixteenOZButton)
+    }
+    @IBAction func thirtyTwoOZButtonTapped(_ sender: Any) {
+        waterVolTextField.text = "32"
+        updateSelectedButton(thirtyTwoOZButton)
+    }
+    
     @IBAction func closeButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func logWaterButtonTapped(_ sender: Any) {
-        //Need to add water amount to database
+        guard let waterVolumeText = waterVolTextField.text,
+              let waterVolume = Int(waterVolumeText) else { return }
         
         if let todaysEntry = WaterDataController.shared.dailyWaterEntry {
-            WaterDataController.shared.updateEntry(for: todaysEntry, with: 8) { result in
+            WaterDataController.shared.updateEntry(for: todaysEntry, with: waterVolume) { result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let response):
@@ -51,7 +78,7 @@ class LogWaterViewController: UIViewController {
                 }
             }
         } else {
-            WaterDataController.shared.saveEntry(with: 8) { result in
+            WaterDataController.shared.saveEntry(with: waterVolume) { result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let response):
@@ -65,6 +92,22 @@ class LogWaterViewController: UIViewController {
         }
         
         
+    }
+    
+    // MARK: - Helper Methods
+    func updateSelectedButton(_ sender: UIButton) {
+        resetButtons()
+        sender.borderColor = #colorLiteral(red: 0, green: 0.4797315598, blue: 0.9985385537, alpha: 1)
+        sender.borderWidth = 2
+    }
+    
+    func resetButtons() {
+        buttons.forEach({ $0.borderColor = .black; $0.borderWidth = 1 })
+    }
+    
+    func setUpView() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
     
     
@@ -100,4 +143,4 @@ class LogWaterViewController: UIViewController {
             return UIColor(cgColor: color)
         }
     }
-}
+}// End of extension

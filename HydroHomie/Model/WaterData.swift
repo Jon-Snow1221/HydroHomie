@@ -8,6 +8,9 @@
 import Foundation
 import CloudKit
 
+/**
+ Creating a struct named HydroStrings containing the String values for keys used when setting the values for a CKRecord.
+ */
 struct HydroStrings {
     static let recordTypeKey = "WaterData"
     fileprivate static let volumeKey = "volume"
@@ -36,6 +39,13 @@ extension WaterData {
 }// End of extension
 
 extension CKRecord {
+    /**
+    Convenience Initializer to create a CKRecord from an Entry object
+    
+    - Parameters:
+     - entry: The Entry object to set Key/Value pairs to store inside a CKRecord
+    */
+    
     convenience init(waterData: WaterData) {
         self.init(recordType: HydroStrings.recordTypeKey, recordID: waterData.recordID)
         self.setValuesForKeys([

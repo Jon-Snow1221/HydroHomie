@@ -20,6 +20,7 @@
 		831C1956276137B000068145 /* HydroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C1955276137B000068145 /* HydroError.swift */; };
 		831C195827614BA600068145 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C195727614BA600068145 /* HomeScreenViewController.swift */; };
 		831C195A2761646300068145 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C19592761646300068145 /* DateExtension.swift */; };
+		831C195C2763D7AE00068145 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831C195B2763D7AE00068145 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		831C1955276137B000068145 /* HydroError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydroError.swift; sourceTree = "<group>"; };
 		831C195727614BA600068145 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		831C19592761646300068145 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		831C195B2763D7AE00068145 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831C19442760F0BE00068145 /* CloudKit.framework in Frameworks */,
+				831C195C2763D7AE00068145 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +89,7 @@
 		831C19422760F0BE00068145 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				831C195B2763D7AE00068145 /* HealthKit.framework */,
 				831C19432760F0BE00068145 /* CloudKit.framework */,
 			);
 			name = Frameworks;

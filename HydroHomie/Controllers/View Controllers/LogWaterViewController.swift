@@ -26,12 +26,7 @@ class LogWaterViewController: UIViewController {
     var buttons: [UIButton] {
         return [eightOZButton, sixteenOZButton, thirtyTwoOZButton]
     }
-    
-    let healthKitStore: HKHealthStore = HKHealthStore()
-//    var typesToShare : Set<HKSampleType> {
-//        let waterType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryWater)!
-//        return [waterType]
-//    }
+
     
     // MARK: - Lifecycles
     

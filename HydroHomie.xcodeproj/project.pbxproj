@@ -21,6 +21,7 @@
 		831C195827614BA600068145 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C195727614BA600068145 /* HomeScreenViewController.swift */; };
 		831C195A2761646300068145 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C19592761646300068145 /* DateExtension.swift */; };
 		831C195C2763D7AE00068145 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831C195B2763D7AE00068145 /* HealthKit.framework */; };
+		83223EB02769198200CEE3AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83223EAF2769198200CEE3AE /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		831C195727614BA600068145 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		831C19592761646300068145 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		831C195B2763D7AE00068145 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		83223EAF2769198200CEE3AE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				831C195727614BA600068145 /* HomeScreenViewController.swift */,
 				831C194827610AB700068145 /* LogWaterViewController.swift */,
 				831C19462760FB9900068145 /* HistoryTableViewController.swift */,
+				83223EAF2769198200CEE3AE /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				831C194927610AB700068145 /* LogWaterViewController.swift in Sources */,
 				831C195827614BA600068145 /* HomeScreenViewController.swift in Sources */,
 				831C192B2760E78400068145 /* AppDelegate.swift in Sources */,
+				83223EB02769198200CEE3AE /* SettingsViewController.swift in Sources */,
 				831C1956276137B000068145 /* HydroError.swift in Sources */,
 				831C195A2761646300068145 /* DateExtension.swift in Sources */,
 				831C192D2760E78400068145 /* SceneDelegate.swift in Sources */,

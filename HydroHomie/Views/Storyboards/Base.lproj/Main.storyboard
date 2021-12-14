@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30l-dt-bWh">
-                                <rect key="frame" x="151.5" y="356.5" width="111" height="37.5"/>
+                                <rect key="frame" x="151.5" y="358.5" width="111" height="37.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log Water">
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
@@ -197,8 +197,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Volume (oz)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHr-bg-3O5">
-                                <rect key="frame" x="151.5" y="287.5" width="111" height="32"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Volume (oz)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHr-bg-3O5">
+                                <rect key="frame" x="151.5" y="287.5" width="111" height="34"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                 <connections>
@@ -302,7 +302,7 @@
         <!--Settings-->
         <scene sceneID="3dG-Ch-JTA">
             <objects>
-                <viewController title="Settings" id="KiA-DQ-zym" sceneMemberID="viewController">
+                <viewController title="Settings" id="KiA-DQ-zym" customClass="SettingsViewController" customModule="HydroHomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W8I-JK-Pic">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -346,32 +346,57 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setGoalButtonTapped:" destination="KiA-DQ-zym" eventType="touchUpInside" id="sDy-EW-YcZ"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Goal: 64 oz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljW-9P-1bo">
-                                <rect key="frame" x="40" y="174.5" width="205" height="29"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Mnh-nk-NlJ">
+                                <rect key="frame" x="40.5" y="174.5" width="205" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljW-9P-1bo">
+                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12b-9x-fBw">
+                                        <rect key="frame" x="145.5" y="0.0" width="27" height="29"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52Q-tG-1O7">
+                                        <rect key="frame" x="179.5" y="0.0" width="25.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jt5-1B-bqA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YgJ-5f-TXJ" firstAttribute="leading" secondItem="jt5-1B-bqA" secondAttribute="leading" constant="40" id="7Bb-Ve-Nv9"/>
+                            <constraint firstItem="Mnh-nk-NlJ" firstAttribute="leading" secondItem="jt5-1B-bqA" secondAttribute="leading" constant="40.5" id="9EY-if-XsP"/>
                             <constraint firstItem="ngm-G5-LZ5" firstAttribute="leading" secondItem="jt5-1B-bqA" secondAttribute="leading" constant="40" id="CUb-eg-Fkv"/>
+                            <constraint firstItem="Mnh-nk-NlJ" firstAttribute="top" secondItem="YgJ-5f-TXJ" secondAttribute="bottom" constant="25" id="JE1-0F-ONL"/>
                             <constraint firstItem="YgJ-5f-TXJ" firstAttribute="top" secondItem="jt5-1B-bqA" secondAttribute="top" constant="60" id="LJU-m0-T4G"/>
                             <constraint firstItem="jt5-1B-bqA" firstAttribute="trailing" secondItem="Pb9-3C-EHU" secondAttribute="trailing" constant="132" id="S4s-gY-Kaw"/>
                             <constraint firstItem="jt5-1B-bqA" firstAttribute="trailing" secondItem="ngm-G5-LZ5" secondAttribute="trailing" constant="277" id="SRb-hM-W8e"/>
                             <constraint firstItem="Pb9-3C-EHU" firstAttribute="leading" secondItem="jt5-1B-bqA" secondAttribute="leading" constant="40" id="TXJ-Kl-MlZ"/>
-                            <constraint firstItem="jt5-1B-bqA" firstAttribute="trailing" secondItem="ljW-9P-1bo" secondAttribute="trailing" constant="169" id="eKv-p7-tXh"/>
+                            <constraint firstItem="jt5-1B-bqA" firstAttribute="trailing" secondItem="Mnh-nk-NlJ" secondAttribute="trailing" constant="168.5" id="g3y-B8-6a2"/>
                             <constraint firstItem="jt5-1B-bqA" firstAttribute="trailing" secondItem="YgJ-5f-TXJ" secondAttribute="trailing" constant="224.5" id="iDF-j4-gUN"/>
-                            <constraint firstItem="Pb9-3C-EHU" firstAttribute="top" secondItem="ljW-9P-1bo" secondAttribute="bottom" constant="26" id="rJK-Zz-asx"/>
+                            <constraint firstItem="Pb9-3C-EHU" firstAttribute="top" secondItem="Mnh-nk-NlJ" secondAttribute="bottom" constant="26" id="pG5-F3-Zjw"/>
                             <constraint firstItem="ngm-G5-LZ5" firstAttribute="top" secondItem="Pb9-3C-EHU" secondAttribute="bottom" constant="25" id="rto-Qk-hev"/>
-                            <constraint firstItem="ljW-9P-1bo" firstAttribute="leading" secondItem="jt5-1B-bqA" secondAttribute="leading" constant="40" id="v3I-L6-D6h"/>
-                            <constraint firstItem="ljW-9P-1bo" firstAttribute="top" secondItem="YgJ-5f-TXJ" secondAttribute="bottom" constant="25" id="vHA-bD-vhU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="YgW-vU-Bmr"/>
+                    <connections>
+                        <outlet property="currentDailyGoal" destination="12b-9x-fBw" id="iQG-Du-OLI"/>
+                        <outlet property="newDailyGoal" destination="ZMN-Hz-ub1" id="szg-kD-gUe"/>
+                        <outlet property="newWaterGoal" destination="ZMN-Hz-ub1" id="hpC-ZD-oFI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muN-s4-MAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

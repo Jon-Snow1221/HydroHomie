@@ -22,6 +22,7 @@
 		831C195A2761646300068145 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C19592761646300068145 /* DateExtension.swift */; };
 		831C195C2763D7AE00068145 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831C195B2763D7AE00068145 /* HealthKit.framework */; };
 		83223EB02769198200CEE3AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83223EAF2769198200CEE3AE /* SettingsViewController.swift */; };
+		83223EB2276960D900CEE3AE /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83223EB1276960D900CEE3AE /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		831C19592761646300068145 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		831C195B2763D7AE00068145 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		83223EAF2769198200CEE3AE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		83223EB1276960D900CEE3AE /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				831C195327612C4700068145 /* Storyboards */,
+				83223EB3276960E300CEE3AE /* Custom Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +171,14 @@
 				831C19592761646300068145 /* DateExtension.swift */,
 			);
 			path = "Helpers+Extensions";
+			sourceTree = "<group>";
+		};
+		83223EB3276960E300CEE3AE /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				83223EB1276960D900CEE3AE /* HistoryTableViewCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 				831C195A2761646300068145 /* DateExtension.swift in Sources */,
 				831C192D2760E78400068145 /* SceneDelegate.swift in Sources */,
 				831C194E2761281C00068145 /* WaterDataController.swift in Sources */,
+				83223EB2276960D900CEE3AE /* HistoryTableViewCell.swift in Sources */,
 				831C194B27611FA400068145 /* WaterData.swift in Sources */,
 				831C19472760FB9900068145 /* HistoryTableViewController.swift in Sources */,
 			);

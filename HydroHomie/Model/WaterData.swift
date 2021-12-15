@@ -15,16 +15,19 @@ struct HydroStrings {
     static let recordTypeKey = "WaterData"
     fileprivate static let volumeKey = "volume"
     fileprivate static let dateKey = "date"
+    fileprivate static let goalKey = "goal"
 }
 
 class WaterData {
     var volume: Int
     var date: Date
+    var goal: Int
     var recordID: CKRecord.ID
     
-    init(volume: Int, date: Date = Date(), recordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)) {
+    init(volume: Int, date: Date = Date(), goal: Int, recordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)) {
         self.volume = volume
         self.date = date
+        self.goal = goal
         self.recordID = recordID
     }
 }// End of class
@@ -33,8 +36,9 @@ extension WaterData {
     
     convenience init?(ckRecord: CKRecord) {
         guard let volume = ckRecord[HydroStrings.volumeKey] as? Int,
-              let date = ckRecord[HydroStrings.dateKey] as? Date else { return nil }
-        self.init(volume: volume, date: date, recordID: ckRecord.recordID)
+              let date = ckRecord[HydroStrings.dateKey] as? Date,
+              let goal = ckRecord[HydroStrings.goalKey] as? Int else { return nil }
+        self.init(volume: volume, date: date, goal: goal, recordID: ckRecord.recordID)
     }
 }// End of extension
 
@@ -50,7 +54,8 @@ extension CKRecord {
         self.init(recordType: HydroStrings.recordTypeKey, recordID: waterData.recordID)
         self.setValuesForKeys([
             HydroStrings.volumeKey : waterData.volume,
-            HydroStrings.dateKey : waterData.date
+            HydroStrings.dateKey : waterData.date,
+            HydroStrings.goalKey : waterData.goal
         ])
     }
 }// End of extension

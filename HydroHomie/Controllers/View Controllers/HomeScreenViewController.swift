@@ -11,12 +11,20 @@ class HomeScreenViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var dailyVolumeLabel: UILabel!
+    @IBOutlet weak var currentDailyGoal: UILabel!
     
     // MARK: - Lifecycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchEntries()
+        WaterDataController.shared.loadFromPersistenceStore() //Loads up goal from previous day
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
+        confirmCurrentDate()
     }
     
     // MARK: - Actions
@@ -24,6 +32,9 @@ class HomeScreenViewController: UIViewController {
     
     // MARK: - Helper Methods
     func updateViews() {
+        let todaysGoal = WaterDataController.shared.dailyGoal
+        currentDailyGoal.text = "\(todaysGoal) oz"
+        
         guard let todaysEntry = WaterDataController.shared.dailyWaterEntry else { return }
         dailyVolumeLabel.text = "\(todaysEntry.volume) oz"
     }
@@ -38,6 +49,14 @@ class HomeScreenViewController: UIViewController {
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
+            }
+        }
+    }
+    
+    func confirmCurrentDate() {
+        if let todaysEntry = WaterDataController.shared.dailyWaterEntry {
+            if !Calendar.current.isDate(todaysEntry.date, inSameDayAs: Date()) {
+                self.fetchEntries()
             }
         }
     }

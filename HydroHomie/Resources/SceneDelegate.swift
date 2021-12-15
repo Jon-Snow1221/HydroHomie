@@ -29,6 +29,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        if let todaysEntry = WaterDataController.shared.dailyWaterEntry {
+            print("Accio View")
+            if !Calendar.current.isDate(todaysEntry.date, inSameDayAs: Date()) {
+                fetchEntries()
+            }
+        }
+        
+        func fetchEntries() {
+            WaterDataController.shared.fetchEntries { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let response):
+                        print(response)
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

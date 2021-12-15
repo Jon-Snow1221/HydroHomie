@@ -33,7 +33,7 @@ class LogWaterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
-        
+        confirmCurrentDate()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -105,7 +105,7 @@ class LogWaterViewController: UIViewController {
     }
     
     func resetButtons() {
-        buttons.forEach({ $0.borderColor = .black; $0.borderWidth = 1 })
+        buttons.forEach({ $0.borderColor = .label; $0.borderWidth = 1 })
     }
     
     func setUpView() {
@@ -113,6 +113,26 @@ class LogWaterViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    func confirmCurrentDate() {
+        if let todaysEntry = WaterDataController.shared.dailyWaterEntry {
+            if !Calendar.current.isDate(todaysEntry.date, inSameDayAs: Date()) {
+                self.fetchEntries()
+            }
+        }
+    }
+    
+    func fetchEntries() {
+        WaterDataController.shared.fetchEntries { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+                    print(response)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
     
 }// End of class
 

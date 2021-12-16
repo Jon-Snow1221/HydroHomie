@@ -12,6 +12,7 @@ class HomeScreenViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var dailyVolumeLabel: UILabel!
     @IBOutlet weak var currentDailyGoal: UILabel!
+    @IBOutlet weak var ringBar: CircularProgressBar!
     
     // MARK: - Lifecycles
     
@@ -37,6 +38,13 @@ class HomeScreenViewController: UIViewController {
         
         guard let todaysEntry = WaterDataController.shared.dailyWaterEntry else { return }
         dailyVolumeLabel.text = "\(todaysEntry.volume) oz"
+    }
+    
+    func progressBar() {
+        let todaysGoal = WaterDataController.shared.dailyGoal
+        guard let todaysEntry = WaterDataController.shared.dailyWaterEntry else { return }
+        
+//        let progress = todaysEntry / todaysGoal
     }
     
     func fetchEntries() {

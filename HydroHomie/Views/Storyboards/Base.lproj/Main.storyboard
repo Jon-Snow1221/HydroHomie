@@ -45,6 +45,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup.and.saucer.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="92M-OA-smX">
                                 <rect key="frame" x="63.5" y="375.5" width="287.5" height="286"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="92M-OA-smX" secondAttribute="height" multiplier="1:1" id="SjS-lz-cep"/>
                                 </constraints>
@@ -72,6 +73,21 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yck-Fb-WEa" customClass="CircularProgressBar" customModule="HydroHomie" customModuleProvider="target">
+                                <rect key="frame" x="63.5" y="375" width="287.5" height="287.5"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yck-Fb-WEa" secondAttribute="height" multiplier="1:1" id="Fvl-21-2gt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" systemColor="systemBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -80,9 +96,13 @@
                             <constraint firstItem="92M-OA-smX" firstAttribute="top" secondItem="qkS-kZ-iyR" secondAttribute="bottom" constant="69.5" id="B20-fC-1Id"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="a8z-rt-mYR" secondAttribute="centerX" id="JMN-D6-Ya1"/>
                             <constraint firstItem="2DT-Pw-lmO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="298.5" id="JUh-kw-1Gk"/>
+                            <constraint firstItem="Yck-Fb-WEa" firstAttribute="trailing" secondItem="92M-OA-smX" secondAttribute="trailing" id="Msq-eJ-0iq"/>
                             <constraint firstItem="qkS-kZ-iyR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QqG-zJ-cPA"/>
+                            <constraint firstItem="Yck-Fb-WEa" firstAttribute="top" secondItem="92M-OA-smX" secondAttribute="top" id="Rdj-uj-BXr"/>
+                            <constraint firstItem="Yck-Fb-WEa" firstAttribute="leading" secondItem="92M-OA-smX" secondAttribute="leading" id="SkE-JA-DNB"/>
                             <constraint firstItem="7TN-ty-2H8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="bDN-DO-mto"/>
                             <constraint firstItem="2DT-Pw-lmO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="dvE-PM-bQR"/>
+                            <constraint firstItem="Yck-Fb-WEa" firstAttribute="bottom" secondItem="92M-OA-smX" secondAttribute="bottom" id="e6q-zC-6t9"/>
                             <constraint firstItem="92M-OA-smX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.320871" id="fH3-Hu-tyg"/>
                             <constraint firstItem="qkS-kZ-iyR" firstAttribute="top" secondItem="a8z-rt-mYR" secondAttribute="bottom" constant="36.5" id="hyh-SS-gKU"/>
                             <constraint firstItem="1ta-HZ-yIb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="mfD-2O-6qs"/>
@@ -95,6 +115,7 @@
                     <connections>
                         <outlet property="currentDailyGoal" destination="1ta-HZ-yIb" id="dzp-gk-yt4"/>
                         <outlet property="dailyVolumeLabel" destination="7TN-ty-2H8" id="evB-jj-Uvz"/>
+                        <outlet property="ringBar" destination="Yck-Fb-WEa" id="VLJ-Nl-CIz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -471,8 +492,14 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

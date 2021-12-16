@@ -23,6 +23,8 @@
 		831C195C2763D7AE00068145 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831C195B2763D7AE00068145 /* HealthKit.framework */; };
 		83223EB02769198200CEE3AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83223EAF2769198200CEE3AE /* SettingsViewController.swift */; };
 		83223EB2276960D900CEE3AE /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83223EB1276960D900CEE3AE /* HistoryTableViewCell.swift */; };
+		83223EB5276A90CA00CEE3AE /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83223EB4276A90CA00CEE3AE /* CircularProgressBar.swift */; };
+		83223EB7276ADABA00CEE3AE /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83223EB6276ADABA00CEE3AE /* HealthStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		831C195B2763D7AE00068145 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		83223EAF2769198200CEE3AE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		83223EB1276960D900CEE3AE /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		83223EB4276A90CA00CEE3AE /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		83223EB6276ADABA00CEE3AE /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 			children = (
 				831C1955276137B000068145 /* HydroError.swift */,
 				831C19592761646300068145 /* DateExtension.swift */,
+				83223EB4276A90CA00CEE3AE /* CircularProgressBar.swift */,
+				83223EB6276ADABA00CEE3AE /* HealthStore.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -259,10 +265,12 @@
 				831C1956276137B000068145 /* HydroError.swift in Sources */,
 				831C195A2761646300068145 /* DateExtension.swift in Sources */,
 				831C192D2760E78400068145 /* SceneDelegate.swift in Sources */,
+				83223EB7276ADABA00CEE3AE /* HealthStore.swift in Sources */,
 				831C194E2761281C00068145 /* WaterDataController.swift in Sources */,
 				83223EB2276960D900CEE3AE /* HistoryTableViewCell.swift in Sources */,
 				831C194B27611FA400068145 /* WaterData.swift in Sources */,
 				831C19472760FB9900068145 /* HistoryTableViewController.swift in Sources */,
+				83223EB5276A90CA00CEE3AE /* CircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
